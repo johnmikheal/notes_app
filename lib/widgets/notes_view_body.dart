@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:tkuo/widgets/custom_app_Bar.dart';
+import 'package:tkuo/widgets/note_item.dart';
+import 'package:tkuo/widgets/notes_list_view.dart';
+
+class NotesViewBody extends StatelessWidget {
+  const NotesViewBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 50,
+          ),
+          CustomAppBar(),
+          Expanded(child: NotesListView())
+        ],
+      ),
+    );
+  }
+}
