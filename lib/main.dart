@@ -5,7 +5,8 @@ import 'package:tkuo/const.dart';
 import 'package:tkuo/views/notes_views.dart';
 
 void main() async {
-  await Hive.initFlutter(knotesBox);
+  await Hive.initFlutter();
+  await Hive.openBox(knotesBox);
 
   runApp(const Notes());
 }
